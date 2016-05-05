@@ -1,0 +1,10 @@
+version: '2'
+services:
+  fabric:
+    build: .
+    privileged: true
+    environment:
+      - FABRIC_SPINE=2  # Number of spine switches
+      - FABRIC_LEAF=2   # Number of leaf switches
+      - FABRIC_FANOUT=2 # Number of hosts per leaf
+      - FABRIC_CONTROLLER=127.0.0.1 # Controller IP address
