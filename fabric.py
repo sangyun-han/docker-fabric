@@ -53,7 +53,6 @@ def init():
     leaf = int(os.environ.get("FABRIC_LEAF", 2))
     fanout = int(os.environ.get("FABRIC_FANOUT", 2))
     controllers = re.split(', ', os.environ.get("FABRIC_CONTROLLER", "127.0.0.1"))
-    print controllers
     topo = LeafSpine(spine=spine, leaf=leaf, fanout=fanout)
     net = Mininet(topo=topo, link=TCLink, build=False,
                   switch=UserSwitch,

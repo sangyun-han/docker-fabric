@@ -1,7 +1,7 @@
 version: '2'
 services:
   fabric:
-    build: .
+    image: rascov/docker-fabric
     privileged: true
     environment:
       - FABRIC_SPINE=2  # Number of spine switches

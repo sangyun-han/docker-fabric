@@ -3,7 +3,6 @@
 A docker image that allows us to emulate a [CORD](http://opencord.org) Fabric data plane easily.
 
 ## Quickstart
-* Run `docker-compose build`
 * Modify controller IP address in `docker-compose.yml`
 * Run `docker-compose run fabric`
 
