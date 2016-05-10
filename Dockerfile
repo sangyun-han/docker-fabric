@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04
 MAINTAINER Charles Chan <rascov@gmail.com>
 
 ENV HOME /root
