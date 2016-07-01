@@ -59,7 +59,8 @@ def init():
                   controller = None,
                   autoSetMacs = True)
     for i in range(len(controllers)):
-        net.addController("c%s" % i , controller=RemoteController, ip=controllers[i])
+        if len(controllers[i]) != 0:
+            net.addController("c%s" % i , controller=RemoteController, ip=controllers[i])
 
     net.build()
     net.start()

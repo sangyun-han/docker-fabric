@@ -7,4 +7,4 @@ services:
       - FABRIC_SPINE=2  # Number of spine switches
       - FABRIC_LEAF=2   # Number of leaf switches
       - FABRIC_FANOUT=2 # Number of hosts per leaf
-      - FABRIC_CONTROLLER=$OC1,$OC2,$OC3 # Comma-separated controller IP address
+      - FABRIC_CONTROLLER=$OC1,$OC2,$OC3,$OC4,$OC5,$OC6,$OC7 # Comma-separated controller IP address
