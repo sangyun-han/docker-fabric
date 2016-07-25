@@ -9,8 +9,10 @@ RUN apt-get update && apt-get install -y sudo git && \
 
 WORKDIR $HOME/mininet
 ADD multi_controller.patch .
-RUN git checkout -b 2.2.1 2.2.1 &&\
-    git apply multi_controller.patch
+ADD kill.patch .
+RUN git checkout -b 2.2.1 2.2.1 && \
+    git apply multi_controller.patch && \
+    git apply kill.patch
 
 WORKDIR $HOME
 RUN ./mininet/util/install.sh -n3f && \

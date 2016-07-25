@@ -1,0 +1,13 @@
+diff --git a/mininet/node.py b/mininet/node.py
+index 544fae3..8350fcc 100644
+--- a/mininet/node.py
++++ b/mininet/node.py
+@@ -1010,7 +1012,7 @@ def stop( self, deleteIntfs=True ):
+         """Stop OpenFlow reference user datapath.
+            deleteIntfs: delete interfaces? (True)"""
+         self.cmd( 'kill %ofdatapath' )
+-        self.cmd( 'kill %ofprotocol' )
++        self.cmd( "ps ax | grep '/%s ' | awk '{print $1}' | xargs sudo kill" % self.name )
+         super( UserSwitch, self ).stop( deleteIntfs )
+
+
