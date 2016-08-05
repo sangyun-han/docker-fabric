@@ -3,8 +3,14 @@
 A docker image that allows us to emulate a [CORD](http://opencord.org) Fabric data plane easily.
 
 ## Quickstart
-* Modify controller IP address in `docker-compose.yml`
-* Run `docker-compose run fabric`
+1. Install `git` and `docker`
+1. Check out the source code
+	* `git clone https://github.com/rascov/docker-fabric.git`
+1. Specify controller IP address(es) by setting OC[1-7] environment variables
+	* `export OC1=172.16.0.1` for 1 instance, or
+	* `export OC1=172.16.0.1 OC2=172.16.0.2 OC3=172.16.0.3` for up to 7 instances
+1. (Optional) Modify parameters in `docker-compose.yml`
+1. Run `docker-compose run fabric`
 
 ## Reference
 * [Tutorial](https://wiki.onosproject.org/display/ONOS/Software+Switch+Installation+Guide) - How to setup ONOS
