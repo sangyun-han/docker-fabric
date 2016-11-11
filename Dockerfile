@@ -4,7 +4,7 @@ MAINTAINER Charles Chan <rascov@gmail.com>
 ENV HOME /root
 
 WORKDIR $HOME
-RUN apt-get update && apt-get install -y sudo git && \
+RUN apt-get update && apt-get install -y sudo git tcpdump arping && \
     git clone https://github.com/mininet/mininet.git
 
 WORKDIR $HOME/mininet
